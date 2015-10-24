@@ -37,13 +37,13 @@ colnames(s)[2] <- 'Activity'
 # Step 5: pull out only the measurement columns for mean and standard deviation
 measures <- data.frame() 
 measures <- s[,1:2]
-# Note: these column ranges are documented in "mycodebook.txt", but originally obtained (and edited) from "features.txt"
+# Note: these column ranges are documented in "mymeasures.txt", but originally obtained (and edited) from "features.txt"
 measures <- cbind( measures, s[,3:8], s[,41:46], s[,81:86],s[,121:126], s[,201:202], s[,227:228], s[,253:254])
 measures <- cbind( measures, s[,266:271], s[,345:350], s[,424:429], s[,503:504], s[,516:517], s[,529:530], s[,559:561]) 
 
 # Step 6: appropriately label the variables with description names of each mean or standard deviation measurement
-# Note: the first section of "mycodebook.txt" contains the proper variable names for all mean and std columns
-measure_names_table <- read.table("./mycodebook.txt", skip = 7)
+# Note: the first section of "mymeasures.txt" contains the proper variable names for all mean and std columns
+measure_names_table <- read.table("./mymeasures.txt", skip = 7)
 measure_names <- measure_names_table[,2]
 colnames(measures)[3:59] <- as.character(measure_names)
 
