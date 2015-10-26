@@ -23,7 +23,9 @@ Step 6:
   
 1. Please note that I created a second copy of the final dataset, formatted for fixed column width.  
    To do this I used the write.fwf() function which is not in the default library set so you must   
-   ensure to install the "gdata" package from CRAN in your R Studio.  
+   ensure to manually install the "gdata" package from CRAN in your R Studio in my script. The fixed
+   width columns are definitely easier to read, however, be aware that the columns don't line up with
+   the column labels.
    
 2. I chose to simply edit a copy of the "features.txt" file in order to define only the columns  
    which were standard deviation or mean measurement data. The processing scripts reads this file  
